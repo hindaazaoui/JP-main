@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insertion professionnelle MMI Bordeaux 2025</title>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<style>
+body { font-family: Arial, sans-serif; background: #f7fafc; margin: 0; padding: 20px; color: #111; }
+.container { max-width: 1000px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+h1 { color: #1e3a8a; }
+h2 { margin-top: 30px; color: #1e40af; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { padding: 8px; border: 1px solid #ccc; text-align: left; }
+th { background: #f0f0f0; }
+input[type="text"] { width: 100%; padding: 8px; margin: 12px 0; border-radius: 5px; border: 1px solid #ccc; }
+.chart { width: 100%; height: 400px; margin: 20px 0; }
+footer { font-size: 14px; color: #555; margin-top: 40px; border-top: 1px solid #ddd; padding-top: 10px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Insertion professionnelle et entrepreneuriat MMI Bordeaux 2025</h1>
+<p>Analyse des trajectoires des diplômés MMI Bordeaux : emploi, contrats, secteurs et entrepreneuriat avant et après le diplôme.</p>
+
+<h2>1. Tableau des diplômés</h2>
+<input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Rechercher par entreprise, contrat ou localisation">
+<table id="emploisTable">
+<thead>
+<tr><th>Prénom</th><th>Nom</th><th>Entreprise</th><th>Contrat</th><th>Localisation</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<h2>2. Répartition par type de contrat</h2>
+<div id="chart_contrat" class="chart"></div>
+
+<h2>3. Répartition géographique</h2>
+<div id="chart_localisation" class="chart"></div>
+
+<h2>4. Répartition par secteur</h2>
+<div id="chart_secteur" class="chart"></div>
+
+<h2>5. Vue globale - Arbre</h2>
+<p>Visualisation TreeMap : chaque bloc représente le nombre de diplômés par secteur, type de contrat et localisation.</p>
+<div id="chart_tree" class="chart"></div>
+<section id="article-mmi-bordeaux">
+  <h1>Face au chômage, monter sa boîte : solution ou mirage ?</h1>
+
+  <p>En 2025, le taux de chômage de l'ensemble des personnes de 15 ans ou plus atteint 7,5 %.  
+  Dans ce contexte, une question agite les futurs diplômés du <strong>BUT MMI Bordeaux</strong> :  
+  « Après mon diplôme, je fonde ma boîte ou j’en rejoins une ? »</p>
+
+  <p>Pour y répondre, un groupe d’étudiants a croisé trois sources de données : archives de l’IUT (1 200 parcours d’anciens),  
+  jeux publics de l’INSEE et France Travail, et logs internes de la plateforme de stages (près de 500 Mo de données brutes).</p>
+
+  <h2>Création d’entreprise</h2>
+  <p>Premier constat : la part des jeunes diplômés MMI qui créent leur entreprise a doublé en cinq ans, passant de 6 % à 12 %.  
+  Ces entreprises sont majoritairement des TPE du numérique, avec moins de 3 salariés en moyenne et un capital de départ inférieur à 10 000 €.</p>
+
+  <h2>Situation en 2018</h2>
+  <p>Les diplômés du DUT MMI de Bordeaux Montaigne présentent un profil jeune, très féminisé et majoritairement littéraire ou économique.  
+  Leur insertion professionnelle est progressive, marquée par une forte poursuite d’études (77 %) — vers des Masters, écoles de communication, ou formations en design numérique.</p>
+
+  <p>Pour ceux qui entrent dans la vie active, les emplois sont majoritairement stables (56 % de CDI/fonction publique),  
+  souvent localisés en Nouvelle-Aquitaine et dans les secteurs du web, de la communication et du multimédia.  
+  Le salaire médian (1 400 €) reste modeste, mais la cohérence entre formation et emploi atteint 62 %.</p>
+
+  <h2>Entrepreneuriat pendant le BUT</h2>
+  <p>Certains étudiants ne considèrent pas le diplôme comme une fin, mais s’insèrent dans la vie active via l’alternance ou le statut <strong>« étudiant entrepreneur »</strong> proposé par PEPITE et Bpifrance.  
+  Ce statut permet de tester un projet avant même la fin du BUT.</p>
+
+  <h2>Fragilité des micro-entreprises</h2>
+  <p>L’analyse des bases de Bpifrance et de la DARES révèle une fragilité structurelle : seules 42 % des micro-entreprises fondées par des moins de 25 ans passent le cap des trois ans, contre 61 % pour l’ensemble des créations.</p>
+
+  <p>Pourtant, les diplômés ayant persévéré enregistrent un revenu moyen annuel de 34 200 €, soit 14 % supérieur à celui des jeunes salariés du secteur numérique.  
+  De plus, les étudiants ayant testé de petits projets en parallèle de leurs études (freelance, site e-commerce, mini-app) sont 2,3 fois plus susceptibles de fonder une entreprise viable à la sortie du diplôme.</p>
+
+  <h2>Insertion professionnelle après échec entrepreneurial</h2>
+  <p>Les archives internes du BUT montrent enfin un point étonnant : 47 % des anciens créateurs ont fini par rejoindre une PME ou une start-up, souvent à un poste à responsabilités,  
+  preuve que l’échec entrepreneurial peut devenir un levier d’insertion.</p>
+
+  <h2>Conclusion</h2>
+  <p>Créer sa boîte à la sortie des études n’est pas une fuite face au chômage, mais un pari à double tranchant.  
+  Les petites structures restent fragiles, mais celles qui survivent offrent à leurs fondateurs une autonomie et un revenu supérieurs à la moyenne.  
+  En 2025, le risque est grand… mais le gain aussi.</p>
+</section>
+
+<section>
+  <p>
+    comment l'entrepreneuriat 
+    peut être une voie d'insertion professionnelle pour les diplômés du BUT MMI Bordeaux en période de chômage élevé.  
+    En croisant des données internes et publiques, cette analyse met en lumière les tendances, les défis et les opportunités liés à la création d'entreprise chez les jeunes diplômés.  
+  </p>
+</section>
+
+
+<footer>Sources : Archives BUT MMI Bordeaux, INSEE, France Travail, Bpifrance, DARES, PEPITE, ADIUT</footer>
+</div>
+
+<script>
+google.charts.load('current', {'packages':['corechart','bar','treemap']});
+google.charts.setOnLoadCallback(drawCharts);
+
+const diplomes = [
+{prenom:"Samuel",nom:"ABADIE",entreprise:"allela-collectif",contrat:"Freelance",localisation:"Bordeaux",secteur:"Numérique"},
+{prenom:"Anaïs",nom:"AKKOUCHE",entreprise:"FAVOREAT DESIGN",contrat:"Alternance",localisation:"Bordeaux",secteur:"Design"},
+{prenom:"Noé",nom:"BRAUD",entreprise:"Agence Eclipse",contrat:"Alternance",localisation:"Bordeaux",secteur:"Communication"},
+{prenom:"Louna",nom:"CHARRIEAU",entreprise:"Wamiz",contrat:"Alternance",localisation:"Paris",secteur:"Communication"},
+{prenom:"Francois",nom:"DA CAMARA",entreprise:"Neold",contrat:"CDD",localisation:"Bordeaux",secteur:"Numérique"},
+{prenom:"Anaïs",nom:"DELAVIER",entreprise:"FLOA",contrat:"Alternance",localisation:"Bordeaux",secteur:"Finance"},
+{prenom:"Lucas",nom:"FROIDEFOND",entreprise:"Vistalid",contrat:"Alternance",localisation:"Bordeaux",secteur:"Numérique"},
+{prenom:"Bastien",nom:"GARNIER",entreprise:"Les Pilotes du Dimanche",contrat:"Alternance",localisation:"Noaille",secteur:"Communication"},
+{prenom:"Mattéo",nom:"GAUTHIER",entreprise:"Lemni",contrat:"CDI",localisation:"Amsterdam",secteur:"Numérique"},
+{prenom:"Emma",nom:"GUILLAUME",entreprise:"CFA Aspect Aquitaine",contrat:"Alternance",localisation:"Bordeaux",secteur:"Formation"},
+{prenom:"Perrine",nom:"JOLY",entreprise:"noesya",contrat:"Stage",localisation:"Bordeaux",secteur:"Numérique"},
+{prenom:"Jeanne",nom:"JONCHERAY",entreprise:"UIMM GIRONDE-LANDES",contrat:"Alternance",localisation:"Bruges",secteur:"Industrie"},
+{prenom:"Louis",nom:"LASSERRE",entreprise:"Yalink",contrat:"Alternance",localisation:"Bordeaux",secteur:"Numérique"},
+{prenom:"Maxime",nom:"LUST",entreprise:"FAVOREAT DESIGN",contrat:"Alternance",localisation:"Bordeaux",secteur:"Design"},
+{prenom:"Alexandra",nom:"MALLARD",entreprise:"Ville de Surgères",contrat:"CDD",localisation:"Surgères",secteur:"Public"},
+{prenom:"Clara",nom:"MANHES",entreprise:"yukan",contrat:"Alternance",localisation:"Toulouse",secteur:"Numérique"},
+{prenom:"Thomas",nom:"MESNIER",entreprise:"French Tooth",contrat:"Alternance",localisation:"",secteur:"Audiovisuel"},
+{prenom:"Audrey",nom:"MILLOT",entreprise:"Monzo Bank",contrat:"CDD",localisation:"Executive ",secteur:"Finance"}
+];
+
+// Générer le tableau
+const tbody = document.querySelector('#emploisTable tbody');
+diplomes.forEach(d => {
+  const tr = document.createElement('tr');
+  tr.innerHTML = `<td>${d.prenom}</td><td>${d.nom}</td><td>${d.entreprise}</td><td>${d.contrat}</td><td>${d.localisation}</td>`;
+  tbody.appendChild(tr);
+});
+
+// Filtrage du tableau
+function filterTable() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const rows = tbody.getElementsByTagName("tr");
+  for (let row of rows) {
+    row.style.display = Array.from(row.getElementsByTagName("td")).some(td => td.textContent.toLowerCase().includes(input)) ? "" : "none";
+  }
+}
+
+// Dessiner les graphiques
+function drawCharts() {
+  const countBy = (arr,key) => arr.reduce((acc,d)=>{acc[d[key]]=(acc[d[key]]||0)+1;return acc;},{});
+
+  // Contrats
+  const dataContrat = google.visualization.arrayToDataTable([['Contrat','Nombre']].concat(Object.entries(countBy(diplomes,'contrat'))));
+  new google.visualization.PieChart(document.getElementById('chart_contrat')).draw(dataContrat,{title:'Répartition par type de contrat',pieHole:0.4,animation:{startup:true,duration:1000}});
+
+  // Localisation
+  const locCounts = {};
+  diplomes.forEach(d=>{ const loc = d.localisation.split(' ·')[0]; if(loc) locCounts[loc]=(locCounts[loc]||0)+1; });
+  const dataLoc = google.visualization.arrayToDataTable([['Ville','Nombre']].concat(Object.entries(locCounts)));
+  new google.visualization.ColumnChart(document.getElementById('chart_localisation')).draw(dataLoc,{title:'Répartition géographique',legend:'none',animation:{startup:true,duration:1000}});
+
+  // Secteurs
+  const dataSecteur = google.visualization.arrayToDataTable([['Secteur','Nombre']].concat(Object.entries(countBy(diplomes,'secteur'))));
+  new google.visualization.BarChart(document.getElementById('chart_secteur')).draw(dataSecteur,{title:'Répartition par secteur',animation:{startup:true,duration:1000}});
+
+  // TreeMap global
+  const treeDataArray = [['Name', 'Parent', 'Value']];
+  diplomes.forEach((d,i) => treeDataArray.push([`${d.prenom} ${d.nom}`, `${d.secteur} - ${d.contrat}`, 1]));
+  const sectors = [...new Set(diplomes.map(d=>`${d.secteur} - ${d.contrat}`))];
+  sectors.forEach(s => treeDataArray.push([s,'Total',diplomes.filter(d=>`${d.secteur} - ${d.contrat}`===s).length]));
+  treeDataArray.push(['Total', null, diplomes.length]);
+
+  const dataTree = google.visualization.arrayToDataTable(treeDataArray);
+  new google.visualization.TreeMap(document.getElementById('chart_tree')).draw(dataTree,{
+    minColor: '#f0f9ff',
+    midColor: '#3b82f6',
+    maxColor: '#1e3a8a',
+    headerHeight: 30,
+    showScale: true
+  });
+}
+</script>
+</body>
+</html>
